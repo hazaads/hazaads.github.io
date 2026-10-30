@@ -189,10 +189,15 @@ p{margin:0}
 .contact{text-align:center;display:grid;justify-items:center;gap:20px}
 .contact h2{font-size:clamp(2.6rem,10vw,8rem);line-height:1;will-change:transform}
 .contact .lead{color:var(--muted);max-width:46ch}
-.crows{width:100%;max-width:640px;margin-top:20px;text-align:left}
-.crow{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;padding:16px 0;border-bottom:1px solid var(--line)}
-.crow .k{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);width:84px;text-transform:uppercase;letter-spacing:.08em}
-.crow .v{font-size:1.2rem;font-weight:500;user-select:all;word-break:break-all;flex:1 1 200px;min-width:0}
+.mailbox{width:100%;max-width:560px;margin-top:12px;display:grid;justify-items:center;gap:16px;padding:28px clamp(18px,4vw,32px);background:var(--surface);border:1px solid var(--line);border-radius:20px}
+.mailbox .k{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.mailbox .v{font-size:clamp(1.15rem,4.6vw,1.6rem);font-weight:600;user-select:all;overflow-wrap:anywhere;text-align:center;min-width:0;max-width:100%}
+.mailbox .copy{padding:10px 18px;font-size:.82rem;border-radius:999px}
+.profiles{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:8px}
+.gh{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);text-decoration:none;font-size:.92rem;transition:border-color .2s}
+.gh:hover{border-color:var(--accent)}
+.gh svg{width:18px;height:18px;flex:none}
+.gh small{font-family:var(--f-mono);font-size:.7rem;color:var(--muted)}
 .copy{font:500 .75rem var(--f-mono);border:1px solid var(--line);background:var(--surface-2);color:var(--ink);padding:6px 12px;border-radius:8px;cursor:pointer}
 .copy:hover{border-color:var(--accent)}
 footer{padding-block:28px 40px;color:var(--muted);font-family:var(--f-mono);font-size:.75rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line)}
@@ -441,11 +446,14 @@ footer{padding-block:28px 40px;color:var(--muted);font-family:var(--f-mono);font
         <p class="lead rv">Estoy disponible para nuevas oportunidades en ciberseguridad, datos, gestión o desarrollo.</p>
         <div class="actions rv"><a class="btn primary cv-dl" href="cv/Hazael-Diaz-Soto-CV.pdf" target="_blank" rel="noopener" download="CV-Hazael-Diaz-Soto.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>Descargar CV (PDF)</a></div>
         <p class="cv-note" id="cv-note" role="status"></p>
-        <div class="crows rv">
-          <div class="crow"><span class="k">Email</span><span class="v" id="email">hazael.ads@gmail.com</span><button class="copy" id="copy-email" data-target="email" type="button">copiar</button></div>
-          <div class="crow"><span class="k">Teléfono</span><span class="v" id="phone">+56 9 4010 3264</span><button class="copy" id="copy-phone" data-target="phone" type="button">copiar</button></div>
-          <div class="crow"><span class="k">GitHub</span><span class="v"><a href="https://github.com/HazDiaz" target="_blank" rel="noopener">github.com/HazDiaz</a></span><span class="cv-note">proyectos</span></div>
-          <div class="crow"><span class="k">GitHub</span><span class="v"><a href="https://github.com/hazaads" target="_blank" rel="noopener">github.com/hazaads</a></span><span class="cv-note">portafolio</span></div>
+        <div class="mailbox rv">
+          <span class="k">Escríbeme a</span>
+          <span class="v" id="email">hazael.ads@gmail.com</span>
+          <button class="copy" id="copy-email" data-target="email" type="button">copiar correo</button>
+        </div>
+        <div class="profiles rv">
+          <a class="gh" href="https://github.com/HazDiaz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>HazDiaz <small>proyectos</small></a>
+          <a class="gh" href="https://github.com/hazaads" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>hazaads <small>portafolio</small></a>
         </div>
       </section>
 
